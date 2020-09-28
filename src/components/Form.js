@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 function Form(props) {
-
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
 
   function handleChange(e) {
-  setName(e.target.value);
+    setName(e.target.value);
   }
+
   function handleSubmit(e) {
-  e.preventDefault();
-  props.addTask(name);
-  setName("");
-}
+    e.preventDefault();
+    props.addTask(name);
+    setName("");
+  }
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="label-wrapper">
